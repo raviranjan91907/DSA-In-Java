@@ -12,7 +12,7 @@ import java.util.Scanner;
        ***
         *
  */
-public class Pattern4 {
+public class Pattern4_Diamond {
     public static void main(String agrs[]){
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();

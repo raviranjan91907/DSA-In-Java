@@ -9,7 +9,7 @@ import java.util.*;
     ****
     *****
  */
-public class Pattern2 {
+public class Pattern2_Tringle {
     public static void main(String args[]){
 
         Scanner sc=new Scanner(System.in);
