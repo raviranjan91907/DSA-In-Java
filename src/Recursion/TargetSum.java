@@ -5,6 +5,18 @@ public class TargetSum {
     static List<List<Integer>> ans=new ArrayList<>();
     static List<Integer> temp=new ArrayList<>();
 
+    public static int countTargetSubSequence(int i,List<Integer> arr,int target,int sum){
+        if(i>=arr.size()){
+            if(sum==target) return 1;
+            return 0;
+        }
+
+        int left=countTargetSubSequence(i+1,arr,target,sum+arr.get(i));
+        int right=countTargetSubSequence(i+1,arr,target,sum);
+
+        return left+right;
+    }
+
     public static List<Integer> targetSumOnlyOneSolution(int i,List<Integer> arr,int target,int sum,List<Integer> temp){
         if(i>=arr.size()){
             if(sum==target) return new ArrayList<>(temp);
@@ -57,6 +69,7 @@ public class TargetSum {
         }
 
 //        System.out.println(targetSum(0,arr,target,0));
-        System.out.println(targetSumOnlyOneSolution(0,arr,target,0,new ArrayList<>()));
+//        System.out.println(targetSumOnlyOneSolution(0,arr,target,0,new ArrayList<>()));
+        System.out.println(countTargetSubSequence(0,arr,target,0));
     }
 }
