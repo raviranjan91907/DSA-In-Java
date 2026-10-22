@@ -1,6 +1,23 @@
 package SortingAlgorithm;
 
 
+/*
+Merge Sort in Java
+Merge Sort is a popular sorting algorithm that uses the divide-and-conquer technique. It divides a list into smaller parts, sorts those parts, and then merges them back together in sorted order.
+
+Since you've been learning Quick Sort, the main difference to remember is:
+- Quick Sort: partitions elements around a pivot.
+- Merge Sort: divides the list into halves, then merges the sorted halves.
+
+
+Feature	Quick Sort	Merge Sort
+Main operation	    Partition	    Merge
+Average time	    O(n\log n)	    O(n\log n)
+Worst-case time	    O(n^2)	        O(n\log n)
+Extra array memory	Usually no	    Yes
+Stable by default	No	            Yes, with a stable merge implementation
+ */
+
 import java.util.*;
 public class MergeSort {
     public static void merge(List<Integer> arr,int low,int mid,int high){

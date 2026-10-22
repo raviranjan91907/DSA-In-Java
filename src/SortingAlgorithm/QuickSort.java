@@ -1,5 +1,29 @@
 package SortingAlgorithm;
 
+
+/*
+Quick Sort is a divide-and-conquer sorting algorithm.
+
+It sorts an array or list by repeatedly dividing it into smaller parts around a selected element called the pivot.
+
+The basic idea is:
+1. Choose a pivot element.
+2. Rearrange the elements so that smaller elements go to the left of the pivot and larger elements go to the right.
+3. Put the pivot in its correct sorted position.
+4. Apply Quick Sort recursively to the left and right parts.
+5. Stop when a part has zero or one element.
+
+What is a pivot?
+A pivot is the element used to divide the list into two parts.
+
+You can choose a pivot in different ways:
+- First element
+- Last element
+- Middle element
+- Random element
+In your code, you select the first element:
+
+ */
 import java.util.*;
 public class QuickSort {
     public static void swap(List<Integer> arr,int i,int j){
@@ -17,7 +41,7 @@ public class QuickSort {
             while(low<=high && arr.get(low)<=pivotElement) {
                 low++;
             }
-            while(low<=high && arr.get(high)>pivotElement) {
+            while(low<=high && arr.get(high)>=pivotElement) {
                 high--;
             }
             if (low <= high) {

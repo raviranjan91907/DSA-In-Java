@@ -1,5 +1,20 @@
 package SortingAlgorithm;
+/*
+Bubble Sort is a sorting algorithm that repeatedly compares two adjacent elements and swaps them if they are in the wrong order.
 
+It is called Bubble Sort because, during each pass, the largest unsorted element moves toward the end of the array, just like a bubble rising to the surface.
+
+Time and space complexity
+Case	        Time complexity
+Best case	    O(n^2) for the basic code above
+Average case    O(n^2)
+Worst case	    O(n^2)
+
+- Space complexity: \(O(1)\), because sorting happens in the original array.
+- Stable: Yes, because equal elements are not swapped.
+- In-place: Yes.
+The best-case complexity can be improved to O(n) by adding a swapped flag that stops the algorithm when a complete pass makes no swaps.
+ */
 import java.util.*;
 public class BubbleSort {
     public static List<Integer> bubbleSort(List<Integer> arr){
