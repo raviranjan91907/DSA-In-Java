@@ -1,4 +1,4 @@
-package LeetCode_Question;
+package LeetCode_Question.Easy;
 
 
 /*
