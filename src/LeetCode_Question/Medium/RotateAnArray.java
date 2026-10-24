@@ -12,6 +12,30 @@ public class RotateAnArray {
         System.out.println(arr);
     }
 
+    public static void reverseArray(int[] arr,int i,int j){
+        while(i<j){
+            int temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+            i++;
+            j--;
+        }
+
+    }
+    public void rotateArrayByDPlace(int[] arr, int k) {
+        int n=arr.length;
+        int d=k>n ? k%n :k;
+
+        reverseArray(arr,0,(n-d)-1);
+
+        reverseArray(arr,n-d,n-1);
+
+        reverseArray(arr,0,n-1);
+
+
+    }
+
+
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
