@@ -1,6 +1,6 @@
 package LeetCode_Question.Easy;
 
-public class RemoveZero {
+public class MoveZero {
     public static void swap(int[] arr,int i,int j){
         int temp=arr[i];
         arr[i]=arr[j];
