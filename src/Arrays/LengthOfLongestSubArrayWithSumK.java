@@ -1,7 +1,7 @@
 package Arrays;
 
 import java.util.*;
-public class LongestSubArrayWithSumK {
+public class LengthOfLongestSubArrayWithSumK {
     public static int longestSubArray(List<Integer> arr,int target){
         Map<Integer,Integer> track=new HashMap<>();
         int sum=0;
