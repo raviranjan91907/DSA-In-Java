@@ -6,5 +6,7 @@ void main() {
 //   Map.Entry<Integer,Integer> e=new AbstractMap.SimpleEntry<>(0,1);
    Character[] ch=new Character[3];
    String s=null;
-   System.out.println(ch[0]);
+
+   int ans='a';
+   System.out.println((int)' ');
 }
