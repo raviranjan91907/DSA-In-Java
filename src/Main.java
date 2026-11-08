@@ -8,5 +8,7 @@ void main() {
    String s=null;
 
    int ans='a';
-   System.out.println((int)' ');
+
+   int a=3749;
+   System.out.println(700/500);
 }
