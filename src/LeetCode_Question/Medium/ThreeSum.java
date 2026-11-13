@@ -16,12 +16,16 @@ public class ThreeSum {
             while(j<q){
                 if(target>(nums[j]+nums[q])) j++;
                 else if(target<(nums[j]+nums[q])) q--;
+
+
+
+
                 else{
                     temp.add(new ArrayList<>(List.of(nums[i],nums[j],nums[q])));
                     j++;
                     q--;
                 }
-            }
+            }a
         }
 
         List<List<Integer>> ans=new ArrayList<>(temp);
