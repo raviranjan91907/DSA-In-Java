@@ -25,7 +25,7 @@ public class ThreeSum {
                     j++;
                     q--;
                 }
-            }a
+            }
         }
 
         List<List<Integer>> ans=new ArrayList<>(temp);
