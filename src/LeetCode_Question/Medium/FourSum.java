@@ -2,30 +2,44 @@ package LeetCode_Question.Medium;
 
 import java.util.*;
 public class FourSum {
-    Set<List<Integer>> solve(int[] nums,int target,int i,List<Integer> temp,int count,Set<List<Integer>> ans,int sum){
-        if(count==4){
-            if(sum==target){
-                ans.add(new ArrayList<>(temp));
-                return ans;
+    public List<List<Integer>> fourSum(int[] nums, int target) {
+
+        Arrays.sort(nums);
+        List<List<Integer>> ans=new ArrayList<>();
+        int n=nums.length;
+
+        for(int i=0;i<n-3;i++){
+
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
+
+            for(int j=i+1;j<n-2;j++){
+
+                if (j > i + 1 && nums[j] == nums[j - 1]) continue;
+
+                int q=j+1;
+                int k=n-1;
+                while(q<k){
+                    long valueSum=(long)nums[i]+nums[j]+nums[q]+nums[k];
+                    if(valueSum>target){
+                        k--;
+                    }
+                    else if(valueSum<target){
+                        q++;
+                    }
+                    else{
+                        // System.out.println(i+" "+j+" "+q+" "+k+" "+valueSum);
+                        ans.add(List.of(nums[i],nums[j],nums[q],nums[k]));
+                        q++;
+                        k--;
+
+                        while (q < k && nums[q] == nums[q - 1]) q++;
+                        while (q < k && nums[k] == nums[k + 1]) k--;
+                    }
+                }
             }
         }
 
-        if(i==nums.length){
-            return ans;
-        }
-
-        temp.add(nums[i]);
-        ans=solve(nums,target,i+1,temp,count+1,ans,sum+nums[i]);
-        temp.remove(temp.size()-1);
-        ans=solve(nums,target,i+1,temp,count,ans,sum);
         return ans;
-    }
-    public List<List<Integer>> fourSum(int[] nums, int target) {
-        List<Integer> temp=new ArrayList<>();
-        Set<List<Integer>> ans=new HashSet<>();
-
-        ans=solve(nums,target,0,temp,0,ans,0);
-        return new ArrayList<>(ans);
 
     }
 }
