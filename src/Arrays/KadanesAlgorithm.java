@@ -43,7 +43,7 @@ public class KadanesAlgorithm {
 
         int sum = 0;
         int maxSum = Integer.MIN_VALUE;
-
+//        {-2, 1, -3, 4, -1, 2, 1, -5, 4};
         for (int i = 0; i < nums.length; i++) {
 
             sum = Math.max(nums[i], sum + nums[i]);
